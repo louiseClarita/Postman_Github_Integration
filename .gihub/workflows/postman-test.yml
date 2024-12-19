@@ -1,0 +1,43 @@
+name: Run Postman Tests
+
+on:
+  push:
+    branches:
+      - main  # Run tests on pushes to the main branch
+  pull_request:  # Also run tests on pull requests
+    branches:
+      - main
+
+jobs:
+  postman-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Step 3: Install Newman
+      - name: Install Newman
+        run: npm install -g newman
+
+      # Step 4: Run Newman
+      - name: Run Postman Tests
+        run: |
+          newman run <path-to-collection.json> \
+            --environment <path-to-environment.json> \
+            --reporters cli,json \
+            --reporter-json-export newman-report.json
+
+      # Optional: Upload Test Report as an Artifact
+      - name: Upload Newman Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: newman-report
+          path: newman-report.json
