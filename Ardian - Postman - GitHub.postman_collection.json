@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "7d8299dc-a356-40de-bdaf-3b22660ef490",
+		"name": "Ardian - Postman - GitHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21012635"
+	},
+	"item": [
+		{
+			"name": "PR - Site Ardian",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessTokenUrl",
+							"value": "https://login.microsoftonline.com/d255bdbf-fe1c-4980-860c-6a211e0761b8/oauth2/v2.0/token",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "NUy8Q~8MDUL4TAiN4HX2M6xrvAji5WX4xGLO5a5j",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "76bb5ec8-29f2-4762-aad3-9311e1b21004",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "https://service.flow.microsoft.com//.default",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Postman Token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://login.windows.net",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{api-key-oauth}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://prod-17.westus.logic.azure.com/workflows/8345b68694c040bda2340f674a081da7/triggers/manual/paths/invoke/EmailSend?api-version=2016-06-01",
+					"protocol": "https",
+					"host": [
+						"prod-17",
+						"westus",
+						"logic",
+						"azure",
+						"com"
+					],
+					"path": [
+						"workflows",
+						"8345b68694c040bda2340f674a081da7",
+						"triggers",
+						"manual",
+						"paths",
+						"invoke",
+						"EmailSend"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2016-06-01"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
