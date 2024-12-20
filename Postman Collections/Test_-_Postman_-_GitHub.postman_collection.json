@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "7d8299dc-a356-40de-bdaf-3b22660ef490",
+		"name": "Ardian - Postman - GitHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PR - Site Ardian",
+			"id": "23732800-c77b-4247-b80a-297301191e53",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": {
+						"accessTokenUrl": "https://login.microsoftonline.com/d255bdbf-fe1c-4980-860c-6a211e0761b8/oauth2/v2.0/token",
+						"clientSecret": "NUy8Q~8MDUL4TAiN4HX2M6xrvAji5WX4xGLO5a5j",
+						"clientId": "76bb5ec8-29f2-4762-aad3-9311e1b21004",
+						"scope": "https://service.flow.microsoft.com//.default",
+						"grant_type": "client_credentials",
+						"tokenName": "Postman Token",
+						"authUrl": "https://login.windows.net",
+						"addTokenTo": "header"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{api-key-oauth}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://prod-17.westus.logic.azure.com/workflows/8345b68694c040bda2340f674a081da7/triggers/manual/paths/invoke/EmailSend?api-version=2016-06-01",
+					"protocol": "https",
+					"host": [
+						"prod-17",
+						"westus",
+						"logic",
+						"azure",
+						"com"
+					],
+					"path": [
+						"workflows",
+						"8345b68694c040bda2340f674a081da7",
+						"triggers",
+						"manual",
+						"paths",
+						"invoke",
+						"EmailSend"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2016-06-01"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
