@@ -31,11 +31,6 @@
 						"key": "api-key",
 						"value": "{api-key-oauth}",
 						"type": "text"
-					},
-					{
-						"key": "Test",
-						"value": "Claritais testing",
-						"type": "text"
 					}
 				],
 				"url": {
